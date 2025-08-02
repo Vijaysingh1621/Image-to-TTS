@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration for production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? [process.env.FRONTEND_URL, 'https://image-to-tssss.netlify.app'] // Add your Vercel URL here
+    ? [process.env.FRONTEND_URL, 'https://image-to-tssss.netlify.app',"http://localhost:5173"] // Add your Vercel URL here
     : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174'],
   credentials: true,
   optionsSuccessStatus: 200
