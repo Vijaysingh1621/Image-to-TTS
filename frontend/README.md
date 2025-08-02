@@ -15,21 +15,25 @@ Modern, responsive frontend for the Image to Voice conversion application built 
 ## Local Development
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Set up environment variables:
+
 ```bash
 cp .env.example .env
 ```
 
 3. Update `.env` with your backend URL:
+
 ```
 VITE_API_URL=http://localhost:5000
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -37,10 +41,12 @@ npm run dev
 ## Deployment on Vercel
 
 ### 1. Prepare Your Repository
+
 - Ensure all files are committed to your Git repository
 - Push to GitHub/GitLab
 
 ### 2. Deploy to Vercel
+
 1. Go to [Vercel.com](https://vercel.com)
 2. Import your repository
 3. Configure:
@@ -49,6 +55,7 @@ npm run dev
    - **Output Directory**: `dist`
 
 ### 3. Set Environment Variables
+
 In Vercel dashboard, add:
 
 ```
@@ -56,6 +63,7 @@ VITE_API_URL=https://your-backend-app.onrender.com
 ```
 
 ### 4. Custom Domain (Optional)
+
 - Add your custom domain in Vercel settings
 - Update CORS settings in backend with your domain
 
@@ -69,8 +77,8 @@ This creates an optimized production build in the `dist/` directory.
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
+| Variable       | Description     | Default                 |
+| -------------- | --------------- | ----------------------- |
 | `VITE_API_URL` | Backend API URL | `http://localhost:5000` |
 
 ## Technologies Used

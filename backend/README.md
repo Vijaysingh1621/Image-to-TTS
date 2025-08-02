@@ -14,11 +14,13 @@ Backend service for converting images with text to speech using Google Cloud Vis
 ## Local Development
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Set up environment variables:
+
 ```bash
 cp .env.example .env
 ```
@@ -26,6 +28,7 @@ cp .env.example .env
 3. Configure Google Cloud credentials (see deployment section)
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -33,10 +36,12 @@ npm run dev
 ## Deployment on Render
 
 ### 1. Prepare Your Repository
+
 - Ensure all files are committed to your Git repository
 - Push to GitHub/GitLab
 
 ### 2. Create Render Service
+
 1. Go to [Render.com](https://render.com)
 2. Connect your repository
 3. Create a new "Web Service"
@@ -46,6 +51,7 @@ npm run dev
    - **Environment**: `Node`
 
 ### 3. Set Environment Variables
+
 In Render dashboard, add these environment variables:
 
 ```
@@ -57,6 +63,7 @@ FRONTEND_URL=https://your-frontend-app.vercel.app
 ```
 
 ### 4. Google Cloud Setup
+
 1. Create a Google Cloud project
 2. Enable Vision API and Text-to-Speech API
 3. Create a service account with appropriate permissions
@@ -66,6 +73,7 @@ FRONTEND_URL=https://your-frontend-app.vercel.app
 **Important**: For the private key, copy the entire key including `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----`, but replace actual newlines with `\\n`.
 
 ### 5. Deploy
+
 - Render will automatically deploy when you push to your main branch
 - Your API will be available at: `https://your-app-name.onrender.com`
 
@@ -78,14 +86,14 @@ FRONTEND_URL=https://your-frontend-app.vercel.app
 
 ## Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NODE_ENV` | Environment (production/development) | No |
-| `PORT` | Server port (default: 5000) | No |
-| `GOOGLE_CLOUD_PRIVATE_KEY` | Google Cloud service account private key | Yes |
-| `GOOGLE_CLOUD_CLIENT_EMAIL` | Google Cloud service account email | Yes |
-| `GOOGLE_CLOUD_PROJECT_ID` | Google Cloud project ID | Yes |
-| `FRONTEND_URL` | Frontend URL for CORS | No |
+| Variable                    | Description                              | Required |
+| --------------------------- | ---------------------------------------- | -------- |
+| `NODE_ENV`                  | Environment (production/development)     | No       |
+| `PORT`                      | Server port (default: 5000)              | No       |
+| `GOOGLE_CLOUD_PRIVATE_KEY`  | Google Cloud service account private key | Yes      |
+| `GOOGLE_CLOUD_CLIENT_EMAIL` | Google Cloud service account email       | Yes      |
+| `GOOGLE_CLOUD_PROJECT_ID`   | Google Cloud project ID                  | Yes      |
+| `FRONTEND_URL`              | Frontend URL for CORS                    | No       |
 
 ## File Structure
 

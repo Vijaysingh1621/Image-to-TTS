@@ -22,12 +22,14 @@ A modern full-stack application that converts text in images to natural-sounding
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 19** - Modern UI framework
 - **Vite** - Lightning-fast build tool
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **Axios** - HTTP client for API requests
 
 ### Backend
+
 - **Node.js** - Runtime environment
 - **Express.js** - Web application framework
 - **Google Cloud Vision API** - OCR service
@@ -53,19 +55,22 @@ imagetovoice/
 ## 🔧 Local Development
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - Google Cloud account with Vision and Text-to-Speech APIs enabled
 - Git
 
 ### Setup
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/yourusername/imagetovoice.git
 cd imagetovoice
 ```
 
 2. **Backend Setup**
+
 ```bash
 cd backend
 npm install
@@ -75,6 +80,7 @@ npm run dev
 ```
 
 3. **Frontend Setup**
+
 ```bash
 cd ../frontend
 npm install
@@ -96,6 +102,7 @@ npm run dev
 
 1. **Push to GitHub**
 2. **Connect to Render**
+
    - Go to [render.com](https://render.com)
    - Create new Web Service
    - Connect your repository
@@ -115,6 +122,7 @@ npm run dev
 ### Frontend on Vercel
 
 1. **Connect to Vercel**
+
    - Go to [vercel.com](https://vercel.com)
    - Import your repository
    - Select `frontend` folder
@@ -132,12 +140,12 @@ npm run dev
 
 ### Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Health check |
-| GET | `/health` | Detailed health status |
-| GET | `/status` | Service configuration status |
-| POST | `/upload` | Upload image and convert to speech |
+| Method | Endpoint  | Description                        |
+| ------ | --------- | ---------------------------------- |
+| GET    | `/`       | Health check                       |
+| GET    | `/health` | Detailed health status             |
+| GET    | `/status` | Service configuration status       |
+| POST   | `/upload` | Upload image and convert to speech |
 
 ### Upload Endpoint
 
@@ -152,6 +160,7 @@ npm run dev
 ## 🔐 Environment Variables
 
 ### Backend
+
 ```env
 NODE_ENV=production
 PORT=5000
@@ -162,6 +171,7 @@ FRONTEND_URL=https://your-frontend-url.com
 ```
 
 ### Frontend
+
 ```env
 VITE_API_URL=https://your-backend-url.com
 ```
